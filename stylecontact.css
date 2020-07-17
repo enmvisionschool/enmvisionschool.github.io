@@ -88,10 +88,10 @@ ul li.active a{
         border: 5px solid #515;
 
 }
-.design h34 {
+#design{
   margin-right:5px;
   position:absolute;
-  top:0;
-    left:0;
+  bottom:0;
+    right:0;
   float:right;
 }
