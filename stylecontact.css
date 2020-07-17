@@ -91,5 +91,6 @@ ul li.active a{
 .design h34 {
   margin-right:5px;
   position:relative;
+  bottom:0;
   float:right;
 }
