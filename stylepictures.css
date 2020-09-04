@@ -55,7 +55,8 @@ ul li.active a{
     max-width: 1200px;
     margin: auto;
 }
-iframe{
-  display: flex;
-  width: 200px;
-}
+
+iframe { 
+       margin-left: auto;   
+       margin-right: auto;  
+      }  
