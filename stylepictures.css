@@ -56,5 +56,6 @@ ul li.active a{
     margin: auto;
 }
 iframe{
+  display: flex;
   width: 200px;
 }
