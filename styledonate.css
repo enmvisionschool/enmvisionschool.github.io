@@ -61,7 +61,7 @@ ul li.active a{
     top: 55%;
     left: 50%;
     transform: translate(-50%,-50%);
-    font-size: 12px solid bold;
+    font-size: 8px solid bold;
     border: 5px solid #444;}
 
 a:link {
