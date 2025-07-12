@@ -1,42 +1,79 @@
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>ENM VISION SCHOOL</title>    
-<link rel="stylesheet" type="text/css" href="stylepictures.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery - ENM Vision School</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-    <div class="main">
-        
-       
-        <ul>
-        <li class="active">
-         <a href="index.html">HOME</a>    
-        </li>
-        <li>
-         <a href="about.html">ABOUT US</a>    
-        </li>
-            <li>
-         <a href="structure.html">STRUCTURE</a>    
-            </li>
-             <li>
-         <a href="pictures.html">GALLERY</a>    
-        </li>
-        <li>
-         <a href="donate.html">DONATE</a>    
-        </li>
-        <li>
-         <a href="contact.html">CONTACT US</a>    
-        </li>
-        </ul>
-        
-     </header>
-        <br>
-        <div>
-        
-            
-           <iframe src="https://onedrive.live.com/embed?resid=BBD70983F83D820A%213802&amp;authkey=%21AHY1ziioqGso7Ok&amp;em=2&amp;wdAr=1.7777777777777777" width=100% height=100% frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
-        </div>
-        
-        </body>
+  <header>
+    <nav class="main">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT US</a></li>
+        <li><a href="structure.html">STRUCTURE</a></li>
+        <li class="active"><a href="pictures.html">GALLERY</a></li>
+        <li><a href="donate.html">DONATE</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="carousel-container">
+    <div class="carousel">
+      <button class="arrow left-arrow" aria-label="Previous Image">&#10094;</button>
+      <img src="img/1.jpeg" alt="School Image 1" class="carousel-image" />
+      <button class="arrow right-arrow" aria-label="Next Image">&#10095;</button>
+    </div>
+  </main>
+
+  <script>
+    const images = [
+      "img/1.jpeg",
+      "img/2.jpeg",
+      "img/3.jpeg",
+      "img/4.jpeg",
+      "img/5.jpeg",
+      "img/6.jpeg",
+      "img/7.jpeg",
+      "img/8.jpeg",
+      "img/9.jpeg",
+      "img/10.jpeg",
+      "img/11.jpeg",
+      "img/12.jpeg",
+      "img/13.jpeg",
+      "img/14.jpeg",
+      "img/15.jpeg",
+      "img/16.jpeg",
+      "img/17.jpeg",
+      "img/18.jpeg",
+      "img/19.jpeg",
+      "img/27.jpeg",
+      "img/28.jpeg",
+      "img/29.jpeg",
+    ];
+
+    let currentIndex = 0;
+    const imgElement = document.querySelector(".carousel-image");
+    const leftArrow = document.querySelector(".left-arrow");
+    const rightArrow = document.querySelector(".right-arrow");
+
+    function showImage(index) {
+      imgElement.src = images[index];
+      imgElement.alt = `School Image ${index + 1}`;
+    }
+
+    leftArrow.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+    });
+
+    rightArrow.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    });
+    showImage(currentIndex);
+  </script>
+</body>
 </html>

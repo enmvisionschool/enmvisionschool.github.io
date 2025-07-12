@@ -1,73 +1,323 @@
-*
-{
-    margin: 0;
-    padding: 0;
-    font-family: Times New Roman;
-
-}
-.logo img{
-    float:left;
-    with:150px;
-    height:auto;
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", serif;
 }
 
-
-header
-{
-    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(img/pic.jpg);
-    height:100vh;
-    background-size:cover;
-    background-position: center;
+body {
+  background-color: #0b1f3a;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* optional for nice parallax effect */
+  color: #f5deb3; /* lighter warm beige for text on dark bg */
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Times New Roman', serif;
 }
 
-ul{
-    float: right;
-    list-style-type: none;
-    margin-top:25px;
-    
-    
+header {
+  background: transparent;
+  height: auto;
+  padding: 20px 0;
+  background-position: center;
 }
 
-
-ul li{
-    display: inline-block;
+/* Navigation Styles */
+nav.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  background-color: rgba(255, 228, 196, 0.9);
 }
 
-ul li a{
-    text-decoration: none;
-    color: #fff;
-    padding: 5px 20px;
-    border: 1px solid transparent;
-    transition: 0.6s ease;
-    
+nav.main ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
 }
 
-ul li a:hover{
-    background-color: #fff;
-    color:#000;
-}
-ul li.active a{
-     background-color: #fff;
-    color:#000;
-}
-
-
-.main{
-    max-width: 1200px;
-    margin: auto;
+nav.main ul li a {
+  text-decoration: none;
+  color: #222222; /* dark but not black for contrast on peachpuff */
+  padding: 5px 15px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: 0.3s ease;
 }
 
-.title{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    border: 5px solid #555;
+nav.main ul li a:hover,
+nav.main ul li.active a {
+  background-color: #ffd59e; /* softer peach highlight */
+  color: #3a1a00; /* dark brown for contrast */
+  border-radius: 4px;
 }
 
-.title h1{
-    color: #fff;
-    font-size:55px;
-    border: 5px solid #fff;
+/* Title Section */
+.title {
+  position: static; /* or remove position */
+  margin: 20px auto;
+  text-align: center;
+  border: 5px solid #555;
+  max-width: 700px;
+  padding: 20px;
 }
 
+.title h1 {
+  color: #ffd59e; 
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.title img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+/* Main Content Areas */
+main,
+.about,
+.contact-info,
+.donate,
+.structure {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px 15px;
+  background: peachpuff; /* keep peachpuff background */
+  color: #3a1a00; /* dark brown text for warm contrast */
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(58, 26, 0, 0.3); /* subtle warm shadow */
+  font-family: 'Georgia', serif;
+  line-height: 1.6;
+}
+
+/* About Section Specific */
+.about section {
+  margin-bottom: 2.5rem;
+}
+
+.about h1,
+.about h2 {
+  color: #5a3500; /* darker brown */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.about h1 {
+  font-size: 2.5rem;
+  border-bottom: 3px solid #ccc;
+  padding-bottom: 0.4rem;
+}
+
+.about h2 {
+  font-size: 1.8rem;
+}
+
+.about p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  text-align: justify;
+  color: #4d3300; /* medium brown for easy reading */
+}
+
+.about br {
+  line-height: 2.5;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  margin-bottom: 15px;
+  color: #5a3500;
+  font-weight: 700;
+}
+
+/* Paragraphs, lists, addresses */
+p, li, address {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  color: #4d3300;
+}
+
+/* Lists */
+ol, ul {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+/* Links inside content */
+a {
+  color: #a85e00; /* rich amber */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  color: #d28c00; /* brighter amber */
+  text-decoration: underline;
+}
+
+/* Donate section specific */
+.donate ol {
+  padding-left: 20px;
+  color: #3a1a00;
+}
+
+/* Address styling */
+address {
+  font-style: normal;
+  line-height: 1.4;
+  color: #4d3300;
+}
+
+/* Responsive iframe for pictures page */
+main iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+  border-radius: 8px;
+}
+
+/* Carousel styles */
+.carousel-container {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+  position: relative;
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(58, 26, 0, 0.3);
+  background: peachpuff;
+  padding: 20px;
+}
+
+.carousel-image {
+  max-width: 100%;
+  max-height: 500px;
+  border-radius: 10px;
+  user-select: none;
+}
+
+.arrow {
+  background: rgba(58, 26, 0, 0.6);
+  border: none;
+  color: #ffd59e;
+  font-size: 2.5rem;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  user-select: none;
+  transition: background 0.3s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+.arrow:hover {
+  background: rgba(58, 26, 0, 0.9);
+}
+main.structure {
+  max-width: 850px;
+  margin: 0 auto 60px;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.page-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #4a3c31;
+  margin-bottom: 30px;
+  border-bottom: 3px solid #c7b299;
+  padding-bottom: 10px;
+  letter-spacing: 1.5px;
+}
+
+.structure-section {
+  margin-bottom: 28px;
+}
+
+.structure-section h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #6b4f3b;
+  margin-bottom: 10px;
+  letter-spacing: 1.1px;
+}
+
+.structure-section p,
+.structure-section ul {
+  font-size: 1.1rem;
+  color: #;
+}
+
+.structure-section ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.structure-section ul li {
+  margin-bottom: 8px;
+}
+
+/* Responsive Typography and Layout */
+@media (max-width: 768px) {
+  .title h1 {
+    font-size: 2.5rem;
+  }
+  nav.main ul {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    padding: 15px;
+  }
+  nav.main ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav.main ul li {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-image {
+    max-height: 300px;
+  }
+  .arrow {
+    font-size: 2rem;
+    padding: 8px 12px;
+  }
+}
